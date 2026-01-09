@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens via CSS variables */
+:root {
+	--ring: 2px;
+	--brand: #6366f1;
+	--brand-600: #4f46e5;
+	--brand-700: #4338ca;
+	--surface: #ffffff;
+	--surface-50: #f9fafb;
+	--text: #111827;
+}
+
+.dark :root {
+	--surface: #111827;
+	--surface-50: #1f2937;
+	--text: #f9fafb;
+}
+
+@layer base {
+	html { scroll-behavior: smooth; }
+	body { @apply bg-surface-50 dark:bg-surface-900 text-gray-900 dark:text-gray-100; }
+	a { @apply text-brand-600 hover:text-brand-700 transition-colors; }
+	:focus-visible { outline: none; box-shadow: 0 0 0 var(--ring) theme('colors.brand.500'); }
+}
+
+@layer components {
+	.btn { @apply inline-flex items-center justify-center rounded-lg font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 px-4 py-2; }
+	.btn-primary { @apply btn bg-gradient-to-r from-brand-600 to-brand-700 text-white shadow-md hover:shadow-lg hover:from-brand-700 hover:to-brand-800 focus-visible:ring-brand-500; }
+	.btn-outline { @apply btn bg-white border border-brand-200 text-brand-700 hover:bg-brand-50 focus-visible:ring-brand-500; }
+	.badge { @apply inline-flex items-center rounded-full px-3 py-1.5 text-xs font-bold shadow-sm; }
+	.badge-success { @apply badge bg-gradient-to-r from-green-400 to-green-500 text-white; }
+	.badge-danger { @apply badge bg-gradient-to-r from-red-400 to-red-500 text-white; }
+	.card { @apply bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden; }
+}
+
+@layer utilities {
+	.glass { backdrop-filter: saturate(180%) blur(8px); background-color: rgba(255,255,255,0.6); }
+}

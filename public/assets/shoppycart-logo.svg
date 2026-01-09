@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle (optional, can be removed) -->
+  <circle cx="100" cy="100" r="95" fill="#f0f4ff" stroke="#4f46e5" stroke-width="2"/>
+  
+  <!-- Shopping Cart -->
+  <g transform="translate(50, 60)">
+    <!-- Cart body -->
+    <path d="M 5 10 L 15 0 L 90 0 L 95 10 L 10 10 Z" fill="#4f46e5" stroke="#4f46e5" stroke-width="1.5" stroke-linejoin="round"/>
+    
+    <!-- Cart wheels -->
+    <circle cx="20" cy="70" r="5" fill="none" stroke="#4f46e5" stroke-width="2"/>
+    <circle cx="75" cy="70" r="5" fill="none" stroke="#4f46e5" stroke-width="2"/>
+    
+    <!-- Cart handle -->
+    <path d="M 15 10 Q 15 40 20 65" fill="none" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 80 10 Q 80 40 75 65" fill="none" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Cart items (simplified boxes) -->
+    <rect x="25" y="15" width="15" height="20" fill="#7c3aed" opacity="0.7" rx="2"/>
+    <rect x="50" y="18" width="12" height="18" fill="#a78bfa" opacity="0.7" rx="2"/>
+  </g>
+  
+  <!-- Fresh Leaf (top right) -->
+  <g transform="translate(115, 50)">
+    <!-- Leaf shape -->
+    <path d="M 15 0 Q 25 10 20 25 Q 15 20 10 25 Q 5 10 15 0" fill="#10b981" stroke="#059669" stroke-width="1"/>
+    <!-- Leaf vein -->
+    <path d="M 15 5 Q 15 10 12 20" fill="none" stroke="#059669" stroke-width="0.8"/>
+  </g>
+  
+  <!-- Text (optional) -->
+  <text x="100" y="160" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4f46e5">ShoppyCart</text>
+</svg>

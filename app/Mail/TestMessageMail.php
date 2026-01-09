@@ -1,0 +1,1 @@
+<?php // Deprecated: TestMessageMail removed. File kept temporarily to avoid autoload errors.
